@@ -8,11 +8,15 @@ public class Plane : MonoBehaviour
     [SerializeField]
     private float impulseForceBelowPlane = 8;
     private EndGame endingGame;
+    public int scoresCounter = 0;
+    private UIController myUIController;
+    public AudioClip AudioScore;
 
     private void Awake()
     {
         plane = GetComponent<Rigidbody2D>();
         endingGame = GetComponent<EndGame>();
+        myUIController = GetComponent<UIController>();
     }
     private void Update()
     {
@@ -28,6 +32,15 @@ public class Plane : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        endingGame.PauseScene();
+        if(collision.CompareTag("Obstacles") || collision.CompareTag("Floor"))
+        {
+            endingGame.PauseScene();
+        }
+        else
+        {
+            scoresCounter++;
+            myUIController.counterUpdate(scoresCounter);
+            AudioController.Instance.PlayOneShot(AudioScore);
+        }
     }
 }

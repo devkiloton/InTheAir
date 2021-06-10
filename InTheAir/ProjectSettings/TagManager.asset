@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Obstacles
+  - Floor
   layers:
   - Default
   - TransparentFX

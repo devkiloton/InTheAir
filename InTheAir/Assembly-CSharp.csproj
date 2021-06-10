@@ -60,11 +60,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Plane.cs" />
+    <Compile Include="Assets\Scripts\UIController.cs" />
+    <Compile Include="Assets\Scripts\EndGame.cs" />
     <Compile Include="Assets\Scripts\ObstacleGenerator.cs" />
     <Compile Include="Assets\Scripts\Obstacles.cs" />
     <Compile Include="Assets\Scripts\Looping.cs" />
-    <Compile Include="Assets\Scripts\EndGame.cs" />
-    <Compile Include="Assets\Scripts\UIController.cs" />
+    <Compile Include="Assets\Scripts\AudioController.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Font\OFL.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

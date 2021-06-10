@@ -5,7 +5,7 @@ using UnityEngine;
 public class EndGame : MonoBehaviour
 {
     private UIController myGameOver;
-    private void Start()
+    private void Awake()
     {
         myGameOver = GetComponent<UIController>();
     }
